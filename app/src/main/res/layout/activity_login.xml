@@ -84,5 +84,14 @@
 
 </LinearLayout>
     </ScrollView>
-
+<ImageView
+    android:id="@+id/goto_reg"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginBottom="30dp"
+    android:layout_marginStart="30dp"
+    android:src="@drawable/backk"
+    android:layout_marginEnd="-15dp"
+    android:layout_width="100dp"
+    android:layout_height="100dp"/>
 </RelativeLayout>
