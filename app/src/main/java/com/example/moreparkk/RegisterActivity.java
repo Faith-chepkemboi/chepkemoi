@@ -30,13 +30,15 @@ ImageView back_to_login;
         setContentView(R.layout.activity_register);
 
         myDatabase=new password_db(this);
+
+
         editTextConPassword=findViewById(R.id.conpass);
         editTextEmail=findViewById(R.id.email);
-        editTextNumber=findViewById(R.id.phone);
+        editTextPhone=findViewById(R.id.pnumber);
+        editTextNumber=findViewById(R.id.idno);
         editTextPersonName=findViewById(R.id.fnames);
-        editTextPhone=findViewById(R.id.phone);
         editTextPassword=findViewById(R.id.password);
-        Button register_user=findViewById(R.id.register);
+        register_user=findViewById(R.id.register);
         
         Register_user();
 
@@ -60,10 +62,9 @@ ImageView back_to_login;
                 String email=editTextEmail.getText().toString();
                 String password=editTextPassword.getText().toString();
                 String username=editTextPersonName.getText().toString();
-                String pnumber=editTextNumber.getText().toString();
-                String id_number=editTextPhone.getText().toString();
+                String id_number=editTextNumber.getText().toString();
 
-                if (RegisterActivity.this.myDatabase.checkid(id_number)) {
+                if (myDatabase.checkid(id_number)) {
                     RegisterActivity.this.editTextEmail.setError((CharSequence)"Id number Exists");
                 }
                 else if (!conpass.equals(password)) {
@@ -81,8 +82,11 @@ ImageView back_to_login;
                 else if (password.isEmpty()) {
                     Toast.makeText((Context)RegisterActivity.this, (CharSequence)"Password field required", (int)0).show();
                 }
-                else{
-                  Boolean isInserted=myDatabase.insertData(email,password,username,pnumber,id_number);
+                else if(myDatabase.checkIfExists(email)) {
+                    Toast.makeText(RegisterActivity.this, "Email Already Exists", Toast.LENGTH_SHORT).show();
+
+                }else{
+                  Boolean isInserted=myDatabase.insertData(email,password,username,id_number);
                   new SweetAlertDialog(RegisterActivity.this,SweetAlertDialog.SUCCESS_TYPE)
                   .setTitleText("message")
                   .setContentText("You are registered")

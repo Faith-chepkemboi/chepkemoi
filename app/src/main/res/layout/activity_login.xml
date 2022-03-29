@@ -46,11 +46,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     <EditText
-        android:id="@+id/phone"
-        android:inputType="phone"
+        android:id="@+id/email"
+        android:inputType="textEmailAddress"
         android:textColor="@color/color_primary"
         android:textColorHint="@color/teal_200"
-        android:hint="@string/phone_number"
+        android:hint="@string/Email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -90,7 +90,7 @@
     android:layout_alignParentEnd="true"
     android:layout_marginBottom="30dp"
     android:layout_marginStart="30dp"
-    android:src="@drawable/backk"
+    android:src="@drawable/plus"
     android:layout_marginEnd="-15dp"
     android:layout_width="100dp"
     android:layout_height="100dp"/>
