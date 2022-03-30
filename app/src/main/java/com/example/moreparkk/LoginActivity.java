@@ -59,18 +59,26 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this, "Invalid Email", Toast.LENGTH_SHORT).show();
 
         } else {
-            Boolean Isentered = mydatabasepassword.Check_email_password(email, password);
 
+            if(mydatabasepassword.Check_email_password(email, password))
+            {
+                final Intent i = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(i);
+            }
+            else {
+                Toast.makeText(this, "Invalid Account", Toast.LENGTH_SHORT).show();
+            }
 
             //Cursor res = mydatabasepassword.login_user(email, password);
             //if (res.getCount() == 1) {
 
-            final Intent i = new Intent(LoginActivity.this, HomeActivity.class);
-            startActivity(i);
         }
-        //}else{
-        //Toast.makeText(this, "Invalid Account", Toast.LENGTH_SHORT).show();
+
     }
+
+
+
+
 
     private  boolean isEmaildValid(String email){
         return email.contains("@");

@@ -63,11 +63,12 @@ ImageView back_to_login;
                 String password=editTextPassword.getText().toString();
                 String username=editTextPersonName.getText().toString();
                 String id_number=editTextNumber.getText().toString();
+                String phone_number=editTextNumber.getText().toString();
 
-                if (myDatabase.checkid(id_number)) {
-                    RegisterActivity.this.editTextEmail.setError((CharSequence)"Id number Exists");
-                }
-                else if (!conpass.equals(password)) {
+                //if (myDatabase.checkid(id_number)) {
+                  //  RegisterActivity.this.editTextEmail.setError((CharSequence)"Id number Exists");
+                //}
+                if (!conpass.equals(password)) {
                     Toast.makeText((Context)RegisterActivity.this, (CharSequence)"Password inserted is not the same", (int)0).show();
                 }
                 else if (!isEmailValid(email)) {
@@ -86,22 +87,21 @@ ImageView back_to_login;
                     Toast.makeText(RegisterActivity.this, "Email Already Exists", Toast.LENGTH_SHORT).show();
 
                 }else{
-                  Boolean isInserted=myDatabase.insertData(email,password,username,id_number);
-                  new SweetAlertDialog(RegisterActivity.this,SweetAlertDialog.SUCCESS_TYPE)
-                  .setTitleText("message")
-                  .setContentText("You are registered")
-                   .setConfirmText("OK")
-                   .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                       @Override
-                       public void onClick(SweetAlertDialog sweetAlertDialog) {
-                           Intent i = new Intent(RegisterActivity.this,LoginActivity.class);
-                           startActivity(i);
+                    if (myDatabase.insertData(email, password, username, id_number,phone_number)) {
+                        new SweetAlertDialog(RegisterActivity.this, SweetAlertDialog.SUCCESS_TYPE)
+                                .setTitleText("message")
+                                .setContentText("You are registered")
+                                .setConfirmText("OK")
+                                .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                    @Override
+                                    public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                        Intent i = new Intent(RegisterActivity.this, LoginActivity.class);
+                                        startActivity(i);
 
-                       }
-                   })
-                  .show();
-
-
+                                    }
+                                })
+                                .show();
+                    }
                 }
 
             }
