@@ -31,7 +31,7 @@ public class password_db extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean insertData(String email, String password, String username, String id_number, String phone_number) {
+    public boolean insertData(String email, String password, String username, String id_number, String phone_number ) {
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -70,7 +70,7 @@ public class password_db extends SQLiteOpenHelper {
          }
         return false;
     }
-
+      //login handler
 
     public Boolean Check_email_password(String email, String password) {
         if (this.getWritableDatabase().rawQuery("select * from chep where EMAIL = ? and PASSWORD = ?", new String[]{email, password}).getCount() > 0) {
@@ -90,16 +90,16 @@ public class password_db extends SQLiteOpenHelper {
         return false;
     }
 
-//    public boolean checkid(String email) {
-//        Cursor cursor = this.getReadableDatabase().rawQuery("select EMAIL from chep", null);
-//        if (cursor.moveToFirst()) {
-//            do {
-//                if (!cursor.getString(0).equals((Object)email)) continue;
-//                return true;
-//            } while (cursor.moveToNext());
-//        }
-//        return false;
-//    }
+    public boolean checkid(String id_number) {
+        Cursor cursor = this.getReadableDatabase().rawQuery("select id_number from chep", null);
+        if (cursor.moveToFirst()) {
+            do {
+                if (!cursor.getString(0).equals((Object)id_number)) continue;
+                return true;
+            } while (cursor.moveToNext());
+        }
+        return false;
+    }
 
 }
 
