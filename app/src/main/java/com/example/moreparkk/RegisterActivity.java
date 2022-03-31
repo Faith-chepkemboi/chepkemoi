@@ -128,12 +128,25 @@ private boolean isValidMail(String email) {
     private boolean isPasswordValid(String password) {
         return password.length() > 5;
     }
-
-    boolean validatephone(String phone_number) {
-        Pattern p = Pattern.compile("[0-9]{10}");
-        Matcher m = p.matcher(phone_number);
-        return m.matches();
+    public static boolean validatephone(String phone) {
+        boolean check = false;
+        if (!Pattern.matches("[a-zA-Z]+", phone)) {
+            if (phone.length() < 9 || phone.length() > 13) {
+                // if(phone.length() != 10) {
+                check = false;
+                // txtPhone.setError("Not Valid Number");
+            } else {
+                check = android.util.Patterns.PHONE.matcher(phone).matches();
+            }
+        } else {
+            check = false;
+        }
+        return check;
     }
+
+
+
+
      private boolean isIdValid(String id_number){
         return id_number.length() ==8;
      }
