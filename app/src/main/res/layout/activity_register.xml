@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/teal_700"
     tools:context=".RegisterActivity">
-    <View
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/color_primary"
-        android:layout_width="11dp"
-        android:layout_height="match_parent"/>
+<!--    <View-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:background="@color/color_primary"-->
+<!--        android:layout_width="11dp"-->
+<!--        android:layout_height="match_parent"/>-->
 
     <ScrollView
         android:layout_width="match_parent"
@@ -23,214 +22,224 @@
         android:layout_centerInParent="true"
         android:paddingTop="10dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <!--            android:layout_marginTop="@dimen/height_100"-->
+        <!--            android:layout_marginLeft="@dimen/height_40"-->
+        <!--            android:layout_marginRight="@dimen/height_40">-->
+
+
+        <!--            <com.google.android.material.textfield.TextInputLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginStart="10dp"-->
+        <!--                android:layout_marginTop="10dp"-->
+        <!--                android:layout_marginEnd="10dp"-->
+        <!--                android:background="@color/white">-->
+
+        <!--                <EditText-->
+        <!--                    android:id="@+id/fnames"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:hint="Full Names"-->
+        <!--                    android:inputType="textPersonName"-->
+        <!--                    android:textColor="@color/color_primary"-->
+        <!--                    android:textColorHint="@color/color_primary" />-->
+        <!--
+
+ </com.google.android.material.textfield.TextInputLayout>-->
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp">
+            android:layout_gravity="center"
+            android:fontFamily="serif-monospace"
+            android:text="Sign Up"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/fnames"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round"
+            android:hint="@string/full_names"
+            android:inputType="textPersonName"
+            android:textColor="@color/purple_700" />
 
 
+        <!--            <com.google.android.material.textfield.TextInputLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginStart="10dp"-->
+        <!--                android:layout_marginTop="10dp"-->
+        <!--                android:layout_marginEnd="10dp"-->
+        <!--                android:background="@color/white">-->
 
-<!--            <com.google.android.material.textfield.TextInputLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="10dp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:background="@color/white">-->
+        <!--                <EditText-->
+        <!--                    android:id="@+id/pnumber"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:hint="Phone Number"-->
+        <!--                    android:inputType="phone"-->
+        <!--                    android:textColor="@color/color_primary"-->
+        <!--                    android:textColorHint="@color/color_primary" />-->
+        <!--            </com.google.android.material.textfield.TextInputLayout>-->
+        <EditText
+            android:id="@+id/pnumber"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:textColor="@color/purple_700" />
 
-<!--                <EditText-->
-<!--                    android:id="@+id/fnames"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:hint="Full Names"-->
-<!--                    android:inputType="textPersonName"-->
-<!--                    android:textColor="@color/color_primary"-->
-<!--                    android:textColorHint="@color/color_primary" />-->
-<!--            </com.google.android.material.textfield.TextInputLayout>-->
-            <EditText
-                android:id="@+id/fnames"
-                android:background="@drawable/round"
-                android:inputType="textEmailAddress"
-                android:textColor="@color/purple_700"
-                android:hint="@string/full_names"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="0dp"/>
+        <!--            <com.google.android.material.textfield.TextInputLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginStart="10dp"-->
+        <!--                android:layout_marginTop="10dp"-->
+        <!--                android:layout_marginEnd="10dp"-->
+        <!--                android:background="@color/white">-->
 
+        <!--                <EditText-->
+        <!--                    android:id="@+id/idno"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:hint="National identity number"-->
+        <!--                    android:inputType="number"-->
+        <!--                    android:textColor="@color/color_primary"-->
+        <!--                    android:textColorHint="@color/color_primary" />-->
+        <!--            </com.google.android.material.textfield.TextInputLayout>-->
 
-<!--            <com.google.android.material.textfield.TextInputLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="10dp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:background="@color/white">-->
-
-<!--                <EditText-->
-<!--                    android:id="@+id/pnumber"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:hint="Phone Number"-->
-<!--                    android:inputType="phone"-->
-<!--                    android:textColor="@color/color_primary"-->
-<!--                    android:textColorHint="@color/color_primary" />-->
-<!--            </com.google.android.material.textfield.TextInputLayout>-->
-            <EditText
-                android:id="@+id/pnumber"
-                android:background="@drawable/round"
-                android:inputType="phone"
-                android:textColor="@color/purple_700"
-                android:hint="Phone Number"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"/>
-<!--            <com.google.android.material.textfield.TextInputLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="10dp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:background="@color/white">-->
-
-<!--                <EditText-->
-<!--                    android:id="@+id/idno"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:hint="National identity number"-->
-<!--                    android:inputType="number"-->
-<!--                    android:textColor="@color/color_primary"-->
-<!--                    android:textColorHint="@color/color_primary" />-->
-<!--            </com.google.android.material.textfield.TextInputLayout>-->
-
-            <EditText
-                android:id="@+id/idno"
-                android:background="@drawable/round"
-                android:inputType="number"
-                android:textColor="@color/purple_700"
-                android:hint="National Identity Number"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/idno"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round"
+            android:hint="National Identity Number"
+            android:inputType="number"
+            android:textColor="@color/purple_700" />
 
 
+        <!--            <com.google.android.material.textfield.TextInputLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginStart="10dp"-->
+        <!--                android:layout_marginTop="10dp"-->
+        <!--                android:layout_marginEnd="10dp"-->
+        <!--                android:background="@color/white">-->
 
-<!--            <com.google.android.material.textfield.TextInputLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="10dp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:background="@color/white">-->
+        <!--                <EditText-->
+        <!--                    android:id="@+id/email"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:hint="Email"-->
+        <!--                    android:inputType="textEmailAddress"-->
+        <!--                    android:textColor="@color/color_primary"-->
+        <!--                    android:textColorHint="@color/color_primary" />-->
+        <!--            </com.google.android.material.textfield.TextInputLayout>-->
 
-<!--                <EditText-->
-<!--                    android:id="@+id/email"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:hint="Email"-->
-<!--                    android:inputType="textEmailAddress"-->
-<!--                    android:textColor="@color/color_primary"-->
-<!--                    android:textColorHint="@color/color_primary" />-->
-<!--            </com.google.android.material.textfield.TextInputLayout>-->
-
-            <EditText
-                android:id="@+id/email"
-                android:background="@drawable/round"
-                android:inputType="textEmailAddress"
-                android:textColor="@color/purple_700"
-                android:hint="@string/Email"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"/>
-
-
-<!--            <com.google.android.material.textfield.TextInputLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="10dp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:background="@color/white">-->
-
-<!--                <EditText-->
-<!--                    android:id="@+id/password"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:hint="Password"-->
-<!--                    android:inputType="textPassword"-->
-<!--                    android:textColor="@color/color_primary"-->
-<!--                    android:textColorHint="@color/color_primary" />-->
-<!--            </com.google.android.material.textfield.TextInputLayout>-->
-
-            <EditText
-                android:id="@+id/password"
-                android:background="@drawable/round"
-                android:inputType="textPassword"
-                android:textColor="@color/purple_700"
-                android:hint="@string/passwordReg"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"/>
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round"
+            android:hint="@string/Email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/purple_700" />
 
 
+        <!--            <com.google.android.material.textfield.TextInputLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginStart="10dp"-->
+        <!--                android:layout_marginTop="10dp"-->
+        <!--                android:layout_marginEnd="10dp"-->
+        <!--                android:background="@color/white">-->
 
-<!--            <com.google.android.material.textfield.TextInputLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="10dp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:background="@color/white">-->
+        <!--                <EditText-->
+        <!--                    android:id="@+id/password"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:hint="Password"-->
+        <!--                    android:inputType="textPassword"-->
+        <!--                    android:textColor="@color/color_primary"-->
+        <!--                    android:textColorHint="@color/color_primary" />-->
+        <!--            </com.google.android.material.textfield.TextInputLayout>-->
 
-<!--                <EditText-->
-<!--                    android:id="@+id/conpass"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:hint="Confirm Password "-->
-<!--                    android:inputType="textPassword"-->
-<!--                    android:textColor="@color/color_primary"-->
-<!--                    android:textColorHint="@color/color_primary" />-->
-<!--            </com.google.android.material.textfield.TextInputLayout>-->
-
-            <EditText
-                android:id="@+id/conpass"
-                android:background="@drawable/round"
-                android:inputType="textPassword"
-                android:textColor="@color/purple_700"
-                android:hint="Confirm Password"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"/>
-
-
-<!--            <Button-->
-<!--                android:id="@+id/register"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="10dp"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:text="Create Account"-->
-<!--                android:textColor="@color/color_primary" />-->
-
-            <Button
-                android:id="@+id/register"
-                android:layout_marginTop="20dp"
-                android:layout_below="@+id/password"
-                android:layout_centerHorizontal="true"
-                android:textColor="@color/color_primary"
-                android:text="@string/create_account"
-                android:layout_width="250dp"
-                android:layout_height="40dp"
-                android:background="@drawable/button"/>
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round"
+            android:hint="@string/passwordReg"
+            android:inputType="textPassword"
+            android:textColor="@color/purple_700" />
 
 
-        </LinearLayout>
+        <!--            <com.google.android.material.textfield.TextInputLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginStart="10dp"-->
+        <!--                android:layout_marginTop="10dp"-->
+        <!--                android:layout_marginEnd="10dp"-->
+        <!--                android:background="@color/white">-->
+
+        <!--                <EditText-->
+        <!--                    android:id="@+id/conpass"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:hint="Confirm Password "-->
+        <!--                    android:inputType="textPassword"-->
+        <!--                    android:textColor="@color/color_primary"-->
+        <!--                    android:textColorHint="@color/color_primary" />-->
+        <!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+        <EditText
+            android:id="@+id/conpass"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:textColor="@color/purple_700" />
+
+        <!--            <Button-->
+        <!--                android:id="@+id/register"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginStart="10dp"-->
+        <!--                android:layout_marginEnd="10dp"-->
+        <!--                android:text="Create Account"-->
+        <!--                android:textColor="@color/color_primary" />-->
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button"
+            android:text="@string/create_account"
+            android:textColor="@color/color_primary" />
+
+
+    </LinearLayout>
     </ScrollView>
     <ImageView
         android:id="@+id/back_to_login"
@@ -241,6 +250,5 @@
         android:layout_marginStart="-15dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="30dp"
-        android:src="@drawable/backk"
-        />
+        android:src="@drawable/backk" />
 </RelativeLayout>
