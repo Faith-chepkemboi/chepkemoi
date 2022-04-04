@@ -48,6 +48,13 @@ public class password_db extends SQLiteOpenHelper {
             return true;
 
     }
+    public void updatePassword(String email, String password){
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COL_3, password);
+        db.update(TABLE_NAME, values, COL_2+"=?",new  String[]{email});
+        db.close();
+    }
 
 
     // public Cursor login_user(String email, String password) {

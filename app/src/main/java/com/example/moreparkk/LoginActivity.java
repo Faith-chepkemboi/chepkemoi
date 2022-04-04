@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
@@ -18,6 +19,7 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText editTextEmail, editTextPassword;
     Button button_login;
+    TextView forgotpasss;
 
     password_db mydatabasepassword;
 
@@ -30,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         editTextEmail = findViewById(R.id.email);
         editTextPassword = findViewById(R.id.password);
         button_login = findViewById(R.id.login);
+        forgotpasss = findViewById(R.id.fogetpass);
 
         button_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +52,15 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+        forgotpasss.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Intent i= new Intent(LoginActivity.this,ForgotPassActivity.class);
+                startActivity(i);
+            }
+        });
     }
+
 
     private void attempt_login() {
         String email = editTextEmail.getText().toString();
