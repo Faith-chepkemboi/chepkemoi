@@ -8,4 +8,6 @@
     <string name="full_names">Full Names</string>
     <string name="passwordReg">Password</string>
     <string name="create_account">Create Account</string>
+    <string name="forgt">Enter Email</string>
+    <string name="enter_email">Enter Email</string>
 </resources>
